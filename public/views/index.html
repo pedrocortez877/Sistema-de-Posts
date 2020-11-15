@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Sistema de Posts</title>
+
+    <!-- Icons font CSS-->
+    <link href="/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Insira aqui seu comentário</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row m-b-55">
+                            <div class="name">Nome</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="firstname" id="firstname">
+                                            <label class="label--desc">first name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="lastname" id="lastname">
+                                            <label class="label--desc">last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Comentário</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="input--style-5" type="text" id="content" name="content" value="" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 250px;">
+                            <button class="btn btn--radius-2 btn--red" onclick="Posts.add();">Postar</button>
+                        </div>
+                    </form>
+                    <div class="searchComments" id="searchComments" name="searchComments">
+                        <div class="name">Pesquise um comentário</div>
+                        <br />
+                        <input type="text" name="buscaTexto" id="buscaTexto" class="input--style-5">
+                        <button type="button" class="btn btn--radius-2 btn--blue" style="margin-top: 10px; margin-left: 250px;" onclick="Posts.buscaComentarios();">Buscar</button>
+                    </div>
+                    <div>
+                        <h2 style="color: #555; font-size: 24px; font-weight: 700;">Comentários</h2>
+                        <div id="comments"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/vendor/select2/select2.min.js"></script>
+    <script src="/vendor/datepicker/moment.min.js"></script>
+    <script src="/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <!-- <script src="/javascript/global.js"></script> -->
+
+    <script type="text/javascript" src="/javascript/jquery-lib.js"></script>
+  <script type="text/javascript" src="/javascript/post-jquery.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
