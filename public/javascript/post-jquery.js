@@ -10,7 +10,9 @@ Posts = {
             url: '/post',
             data: t,
             dataType: 'json',
-            success: Posts.template
+            success: data => {
+                Posts.template(data);
+            }
         })
 
         return false
